@@ -1,12 +1,12 @@
 var curntImg = $('#current-img').imgAreaSelect({
         handles : true,
-        borderColor1 : "#006400",
-        borderColor2 : "#20B2AA",
+        borderColor1 : "#DCDCDC",
+        borderColor2 : "#DCDCDC",
         borderOpacity : "1",
-        outerColor : "#FFD700",
-        outerOpacity : "1",
-        selectionColor: '#00FF00',
-        selectionOpacity: '0.5'
+        outerColor : "null",
+        outerOpacity : "0",
+        selectionColor: '#F5F5F5',
+        selectionOpacity: '0.2'
     });
 
 
