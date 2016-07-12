@@ -1,22 +1,7 @@
-var x1;
-var y1;
-var x2;
-var y2;
-function getCoordin(img,selection){
-    x1 = $("#X1").attr("value", selection.x1)
-    y1 = $("#Y1").attr("value", selection.y1)
-    x2 = $("#X2").attr("value", selection.x2)
-    y2 = $("#Y2").attr("value", selection.y2)
-}
-function addOk(){
-    $("#img-ok").html("<button>OK</button>")
-}
+$(document).ready(function(){
+    var imgObj = {};
 
-function inputCoordinate(img,selection){
-
-}
-
-var curntImg = $('#current-img').imgAreaSelect({
+    var curntImg = $('#current-img').imgAreaSelect({
         handles : true,
         borderColor1 : "#DCDCDC",
         borderColor2 : "#DCDCDC",
@@ -30,4 +15,43 @@ var curntImg = $('#current-img').imgAreaSelect({
 
     });
 
+    function getCoordin(img,selection){
+        imgObj.x1 = selection.x1;
+        imgObj.y1 = selection.y1;
+        imgObj.x2 = selection.x2;
+        imgObj.y2 = selection.y2;
+    }
+    function addOk(){
+        $('#btn_ok').show();
+    }
 
+    $('#img_form').submit(
+        function(){
+            nameImg = $('#name-img').val();
+            if (nameImg !== ''){
+                imgObj.nameImg = nameImg;
+            }
+            else{
+                $('#inp-emp').show();
+                return false
+            }
+            imgObj.urlImg = $('#current-img').attr('src')
+            strJSON = $.toJSON(imgObj)
+            $.ajax({
+                type: "POST",
+                url: "http://httpbin.org/post",
+                data:strJSON,
+                contentType: 'application/json; charset=utf-8',
+                dataType: "json",
+//                success: function() {
+//                    document.location = "http://httpbin.org/post";}
+
+   });
+            return false
+        }
+    )
+
+
+
+
+})
