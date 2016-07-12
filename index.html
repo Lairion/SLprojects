@@ -3,29 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="css/ind.css">
-    <link rel="stylesheet" href="js/odyniec-imgareaselect-48c3fc5/distfiles/css/imgareaselect-default.css">
-    <link rel="stylesheet" href="js/odyniec-imgareaselect-48c3fc5/distfiles/css/imgareaselect-animated.css">
-    <link rel="stylesheet" href="js/odyniec-imgareaselect-48c3fc5/distfiles/css/imgareaselect-deprecated.css">
-    <script src="js/jquery-3.0.0.min.js" type="text/javascript"></script>
-    <script src="js/odyniec-imgareaselect-48c3fc5/jquery.imgareaselect.dev.js"></script>
-    <script src="js/jquery.json.js"></script>
-    <script src="js/jquery.json.min.js"></script>
+    <link rel="stylesheet" href="css/our/ind.css">
+    <link rel="stylesheet" href="js/imgAreaSelect/distfiles/css/imgareaselect-default.css">
+    <link rel="stylesheet" href="js/imgAreaSelect/distfiles/css/imgareaselect-animated.css">
+    <link rel="stylesheet" href="js/imgAreaSelect/distfiles/css/imgareaselect-deprecated.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <script src="js/Jquery/jquery-3.0.0.min.js" type="text/javascript"></script>
+    <script src="js/imgAreaSelect/jquery.imgareaselect.dev.js"></script>
+    <script src="js/json/jquery.json.js"></script>
+    <script src="js/json/jquery.json.min.js"></script>
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
 
 
 </head>
 <body>
 <form id="img_form" action="">
-    <div id="img_block" style ="height: 20%">
-        <div id="input-block" style="position:relative;top:40%">
+    <div id="img_block" class="container-fluid">
+        <div id="input-block" class="row">
+            <div class="col-sm-6" style="margin-top:2%;margin-bottom:2%">
             <strong>Name:</strong>
-            <input id="name-img" type="text">
-            <ul><li id="inp-emp" class="in_shadow" style="color:red;font-size:10px">Input name</li></ul>
+            <input id="name-img" class="stat_input_area" type="text">
+            <strong id="inp-emp" style="color:red;font-size:10px">Input name</strong>
+            </div>
         </div>
-        <img id="current-img" src="img/sea.jpg" alt=""><br>
-        <button id="btn_ok" class="in_shadow" type="submit">ok</button>
+        <div class="row">
+        <img id="current-img" src="img/sea.jpg" alt="" style="margin-bottom:2%"><br>
+        <button id="btn_ok" class="btn btn-success" type="submit">ok</button>
+        </div>
     </div>
 </form>
-    <script src="js/catch_coor.js" type="text/javascript"></script>
+    <script src="js/our_script/catch_coor.js" type="text/javascript"></script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+.in_shadow {
+    display: none;
+    height: 20%
+}
+
+.stat_input_area:focus {
+    box-shadow: 0 0 10px #00cc00;
+    border-color: #00cc00;
+}
+.emply_input {
+    box-shadow: 0 0 10px #ff0000;
+    border-color: #ff3333;
+}

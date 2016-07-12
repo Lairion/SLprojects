@@ -1,5 +1,14 @@
 $(document).ready(function(){
     var imgObj = {};
+    $('#btn_ok').hide();
+    $('#inp-emp').hide();
+    $('#name-img').focusin(
+        function(){
+            $('#name-img').removeClass('emply_input');
+            $('#inp-emp').hide();
+        }
+    )
+
 
     var curntImg = $('#current-img').imgAreaSelect({
         handles : true,
@@ -33,6 +42,7 @@ $(document).ready(function(){
             }
             else{
                 $('#inp-emp').show();
+                $('#name-img').addClass('emply_input')
                 return false
             }
             imgObj.urlImg = $('#current-img').attr('src')
@@ -42,8 +52,8 @@ $(document).ready(function(){
                 url: "http://httpbin.org/post",
                 data:strJSON,
                 contentType: 'application/json; charset=utf-8',
-                dataType: "json",
-//                success: function() {
+//                dataType: "json",
+//                success: function(data) {
 //                    document.location = "http://httpbin.org/post";}
 
    });
